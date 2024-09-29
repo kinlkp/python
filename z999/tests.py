@@ -105,6 +105,9 @@ def maxProfit(prices):
     return max_profit
 
 def lengthOfLastWord(str1):
+    """
+    Given a string s consisting of words and spaces, return the length of the last word in the string.
+    """
     a = str1.split(" ")
     i = -1
     while True:
