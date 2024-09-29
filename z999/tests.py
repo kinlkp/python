@@ -71,8 +71,30 @@ def majorityElement(nums):
 
     return o
 
+def maxProfit(nums):
+    # m = nums.index(min(nums))
+    # max = 0
+    # for i in range(m, len(nums)):
+    #     if nums[i] > nums[m]:
+    #         d = nums[i] - nums[m]
+    #         if d > max:
+    #             max = d
+    # return max
+    if not prices:
+        return 0
+
+    min_price = float('inf')
+    max_profit = 0
+
+    for price in prices:
+        if price < min_price:
+            min_price = price
+        elif price - min_price > max_profit:
+            max_profit = price - min_price
+
+    return max_profit
                     
 if __name__ == '__main__':
-    nums = [3,2,3]
-    o = majorityElement(nums)
+    nums = [2,4,1]
+    o = maxProfit(nums)
     print(o)
