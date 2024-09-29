@@ -52,17 +52,27 @@ def majorityElement(nums):
     The majority element is the element that appears more than ⌊n / 2⌋ times.
     You may assume that the majority element always exists in the array.
     """
-    count = 0
-    candidate = None
-    for num in nums:
-        if count == 0:
-            candidate = num
-        count += (1 if num == candidate else -1)
-        print(candidate, count)
-    return candidate
+    # count = 0
+    # candidate = None
+    # for num in nums:
+    #     if count == 0:
+    #         candidate = num
+    #     count += (1 if num == candidate else -1)
+    #     print(candidate, count)
+    # return candidate
+    from collections import Counter
+    c = Counter(nums)
+    max = 0
+    o = None
+    for i in c.most_common():
+        if i[1] > max:
+            max = i[1]
+            o = i[0]
+
+    return o
 
                     
 if __name__ == '__main__':
-    nums = [2,2,3,3]
+    nums = [3,2,3]
     o = majorityElement(nums)
     print(o)
