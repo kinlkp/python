@@ -72,6 +72,13 @@ def majorityElement(nums):
     return o
 
 def maxProfit(prices):
+    """
+    You are given an array prices where prices[i] is the price of a given 
+    stock on the ith day. You want to maximize your profit by choosing a 
+    single day to buy one stock and choosing a different day in the future to sell that stock.
+    Return the maximum profit you can achieve from this transaction. 
+    If you cannot achieve any profit, return 0.
+    """
     # if not prices:
     #     return 0
     # m = nums.index(min(nums))
@@ -96,8 +103,18 @@ def maxProfit(prices):
             max_profit = price - min_price
 
     return max_profit
+
+def lengthOfLastWord(str1):
+    a = str1.split(" ")
+    i = -1
+    while True:
+        if len(a[i])  == 0:
+            i -= 1
+        else:
+            return len(a[i])
+
                     
 if __name__ == '__main__':
-    nums = [2,4,1]
-    o = maxProfit(nums)
+    str1 = "   fly me   to   the moon  "
+    o = lengthOfLastWord(str1)
     print(o)
