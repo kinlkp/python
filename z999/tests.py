@@ -71,7 +71,7 @@ def majorityElement(nums):
 
     return o
 
-def maxProfit(nums):
+def maxProfit(prices):
     # m = nums.index(min(nums))
     # max = 0
     # for i in range(m, len(nums)):
