@@ -61,10 +61,8 @@ def majorityElement(nums):
         print(candidate, count)
     return candidate
 
-
-
-
+                    
 if __name__ == '__main__':
-    nums = [1,1,2,2,2,3]
+    nums = [2,2,3,3]
     o = majorityElement(nums)
     print(o)
