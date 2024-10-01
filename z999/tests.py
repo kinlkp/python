@@ -119,21 +119,18 @@ def lengthOfLastWord(str1):
 
 def romanToInt(str1):
     a = list(str1)
+    m = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
     for k, v in enumerate(a):
-        if v == 'I':
-            a[k] = 1
-        elif v == 'V':
-            a[k] = 5
-        elif v == 'X':
-            a[k] = 10
-        elif v == 'L':
-            a[k] = 50
-        elif v == 'C':
-            a[k] = 100
-        elif v == 'D':
-            a[k] = 500
-        else:
-            a[k] = 1000
+        a[k] = m[v]
+
     for i in range(0, len(a) - 1):
         # if a[i] == 1 and a[i+1] == 5:
         #     a[i] = -abs(a[i])
@@ -157,8 +154,18 @@ def romanToInt(str1):
 
     print(sum)
 
+def strStr(haystack, needle):
+    r = haystack.split(needle)
+    if len(r) == 1:
+        return -1
+    else:
+        for k, v in enumerate(r):
+            if v == '':
+                return k
+            else:
+                return len(r[0])
        
 if __name__ == '__main__':
     str1 = "MCMXCIV"
-    o = romanToInt(str1)
+    o = strStr("hello", "ll")
     print(o)
