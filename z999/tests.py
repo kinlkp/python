@@ -134,10 +134,20 @@ def romanToInt(str1):
             a[k] = 500
         else:
             a[k] = 1000
-    print(a)
+    for i in range(0, len(a) - 1):
+        if a[i] == 1 and a[i+1] == 5:
+            a[i] = -abs(a[i])
+        if a[i] == 1 and a[i+1] == 10:
+            a[i] = -abs(a[i])
+
+    sum = 0
+    for i in range(0, len(a)):
+        sum += a[i]
+
+    print(sum)
 
        
 if __name__ == '__main__':
-    str1 = "III"
+    str1 = "IX"
     o = romanToInt(str1)
     print(o)
