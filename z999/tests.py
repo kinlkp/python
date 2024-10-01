@@ -116,8 +116,28 @@ def lengthOfLastWord(str1):
         else:
             return len(a[i])
 
-                    
+
+def romanToInt(str1):
+    a = list(str1)
+    for k, v in enumerate(a):
+        if v == 'I':
+            a[k] = 1
+        elif v == 'V':
+            a[k] = 5
+        elif v == 'X':
+            a[k] = 10
+        elif v == 'L':
+            a[k] = 50
+        elif v == 'C':
+            a[k] = 100
+        elif v == 'D':
+            a[k] = 500
+        else:
+            a[k] = 1000
+    print(a)
+
+       
 if __name__ == '__main__':
-    str1 = "   fly me   to   the moon  "
-    o = lengthOfLastWord(str1)
+    str1 = "III"
+    o = romanToInt(str1)
     print(o)
