@@ -137,7 +137,11 @@ def romanToInt(str1):
     for i in range(0, len(a) - 1):
         if a[i] == 1 and a[i+1] == 5:
             a[i] = -abs(a[i])
-        if a[i] == 1 and a[i+1] == 10:
+        elif a[i] == 1 and a[i+1] == 10:
+            a[i] = -abs(a[i])
+        elif a[i] == 10 and a[i+1] == 50:
+            a[i] = -abs(a[i])
+        elif a[i] == 10 and a[i+1] == 100:
             a[i] = -abs(a[i])
 
     sum = 0
@@ -148,6 +152,6 @@ def romanToInt(str1):
 
        
 if __name__ == '__main__':
-    str1 = "XV"
+    str1 = "LVIII"
     o = romanToInt(str1)
     print(o)
