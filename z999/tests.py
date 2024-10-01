@@ -135,18 +135,21 @@ def romanToInt(str1):
         else:
             a[k] = 1000
     for i in range(0, len(a) - 1):
-        if a[i] == 1 and a[i+1] == 5:
-            a[i] = -abs(a[i])
-        elif a[i] == 1 and a[i+1] == 10:
-            a[i] = -abs(a[i])
-        elif a[i] == 10 and a[i+1] == 50:
-            a[i] = -abs(a[i])
-        elif a[i] == 10 and a[i+1] == 100:
-            a[i] = -abs(a[i])
-        elif a[i] == 100 and a[i+1] == 500:
-            a[i] = -abs(a[i])
-        elif a[i] == 100 and a[i+1] == 1000:
-            a[i] = -abs(a[i])           
+        # if a[i] == 1 and a[i+1] == 5:
+        #     a[i] = -abs(a[i])
+        # elif a[i] == 1 and a[i+1] == 10:
+        #     a[i] = -abs(a[i])
+        # elif a[i] == 10 and a[i+1] == 50:
+        #     a[i] = -abs(a[i])
+        # elif a[i] == 10 and a[i+1] == 100:
+        #     a[i] = -abs(a[i])
+        # elif a[i] == 100 and a[i+1] == 500:
+        #     a[i] = -abs(a[i])
+        # elif a[i] == 100 and a[i+1] == 1000:
+        #     a[i] = -abs(a[i])    
+        r = a[i+1] / a[i]
+        if r == 5 or r == 10:
+            a[i] = -abs(a[i])            
 
     sum = 0
     for i in range(0, len(a)):
