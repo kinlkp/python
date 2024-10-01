@@ -148,6 +148,6 @@ def romanToInt(str1):
 
        
 if __name__ == '__main__':
-    str1 = "IX"
+    str1 = "XV"
     o = romanToInt(str1)
     print(o)
