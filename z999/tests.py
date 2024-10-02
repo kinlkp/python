@@ -71,6 +71,7 @@ def majorityElement(nums):
 
     return o
 
+
 def maxProfit(prices):
     """
     You are given an array prices where prices[i] is the price of a given 
@@ -103,6 +104,7 @@ def maxProfit(prices):
             max_profit = price - min_price
 
     return max_profit
+
 
 def lengthOfLastWord(str1):
     """
@@ -154,6 +156,33 @@ def romanToInt(str1):
 
     print(sum)
 
+
+def longestCommonPrefix(strs: list[str]):
+    short = 999999999
+    for x in strs:
+        if len(x) < short:
+            short = len(x)
+
+    for i in range(1, len(strs)):
+        if strs[i -1][0] != strs[i][0]:
+            return ""
+    count = 1 
+    if short >= 1:
+        j = None
+        for j in range(1, short):
+            b = False
+            for i in range(1, len(strs)):
+                if strs[i-1][j] != strs[i][j]:
+                    b = True
+                    break
+                
+            if b:
+                break
+            else:
+                count += 1
+    return strs[0][0:count]
+                
+
 def strStr(haystack, needle):
     r = haystack.split(needle)
     if len(r) == 1:
@@ -166,6 +195,4 @@ def strStr(haystack, needle):
                 return len(r[0])
        
 if __name__ == '__main__':
-    str1 = "MCMXCIV"
-    o = strStr("hello", "ll")
-    print(o)
+    print(longestCommonPrefix(["abcd", "b"]))
