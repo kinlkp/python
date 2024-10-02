@@ -160,6 +160,8 @@ def romanToInt(str1):
 def longestCommonPrefix(strs: list[str]):
     short = 999999999
     for x in strs:
+        if len(x) == 0:
+            return ""
         if len(x) < short:
             short = len(x)
 
