@@ -208,6 +208,9 @@ def merge(nums1, m, nums2, n):
     nums1.sort()
 
 
+def isPalindrome(s: str):
+    return s
+
        
 if __name__ == '__main__':
     merge([-1,0,0,3,3,3,0,0,0], 6, [1,2,2], 3)
