@@ -195,6 +195,15 @@ def strStr(haystack, needle):
                 return k
             else:
                 return len(r[0])
+
+def merge(nums1, m, nums2, n):
+    for k, v in enumerate(nums1):
+        if v == 0 and len(nums2) > 0:
+            nums1[k] = nums2.pop()
+
+    nums1.sort()
+
+
        
 if __name__ == '__main__':
-    print(longestCommonPrefix(["abcd", "b"]))
+    merge([-1,0,0,3,3,3,0,0,0], 6, [1,2,2], 3)
