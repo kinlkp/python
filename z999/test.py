@@ -209,8 +209,18 @@ def merge(nums1, m, nums2, n):
 
 
 def isPalindrome(s: str):
-    return s
+    import re
+    s = re.sub('[^0-9a-zA-z]', '', s)
+    s = s.lower()
+    a = list(s)
+    j = -1
+    for i in range(0, len(a)):
+        if a[i] != a[j]:
+            return False
+        j -= 1
+    return True
+    
 
-       
 if __name__ == '__main__':
-    merge([-1,0,0,3,3,3,0,0,0], 6, [1,2,2], 3)
+    x = isPalindrome("abx")
+    print(x)
