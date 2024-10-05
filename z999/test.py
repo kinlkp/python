@@ -236,5 +236,13 @@ def beautifulWord(s: str):
         print(count)
 
 
+def removeChar(s: str):
+    w = "v"
+    s = list(s)
+    while w in s:
+        s.remove(w)
+    print(''.join(s))
+
+
 if __name__ == '__main__':
-    x = beautifulWord("avvxsdepoad")
+    x = removeChar("avvxsdepoad")
