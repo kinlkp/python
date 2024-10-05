@@ -210,7 +210,7 @@ def merge(nums1, m, nums2, n):
 
 def isPalindrome(s: str):
     import re
-    s = re.sub('[^0-9a-zA-z]', '', s)
+    s = re.sub('[^0-9a-zA-Z]', '', s)
     s = s.lower()
     a = list(s)
     j = -1
@@ -219,8 +219,8 @@ def isPalindrome(s: str):
             return False
         j -= 1
     return True
-    
+
 
 if __name__ == '__main__':
-    x = isPalindrome("abx")
+    x = isPalindrome("ab_a")
     print(x)
