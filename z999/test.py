@@ -237,5 +237,4 @@ def beautifulWord(s: str):
 
 
 if __name__ == '__main__':
-    x = beautifulWord("dadadfsfjsdfsfastz")
-
+    x = beautifulWord("avvxsdepoad")
