@@ -221,6 +221,21 @@ def isPalindrome(s: str):
     return True
 
 
+def beautifulWord(s: str):
+    count = 0 
+    for i in range(1, len(s)):
+        if s[i-1] == s[i]:
+            count += 1
+            continue
+        if ord(s[i-1]) == ord(s[i]) - 1:
+            count += 1
+            continue
+    if count > 1:
+        print(count-1)
+    else:
+        print(count)
+
+
 if __name__ == '__main__':
-    x = isPalindrome("ab_a")
-    print(x)
+    x = beautifulWord("dadadfsfjsdfsfastz")
+
