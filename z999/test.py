@@ -195,7 +195,11 @@ def strStr(haystack, needle):
                 return k
             else:
                 return len(r[0])
+"""
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+"""
 def merge(nums1, m, nums2, n):
     for k, v in enumerate(nums1):
         if v == 0 and len(nums2) > 0:
