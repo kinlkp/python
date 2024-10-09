@@ -244,5 +244,24 @@ def removeChar(s: str):
     print(''.join(s))
 
 
+def isSubsequence(sub: str, whole: str) -> bool:
+    if len(sub) == 0:
+        return True
+    last = 0
+    for s in sub:
+        res = whole.split(s)
+        print(res)
+        if len(res[0]) == len(whole):
+            return False
+        if len(res[0]) >= last:
+            last = len(res[0])
+            continue
+        else:
+            return False
+
+    return True
+
+
 if __name__ == '__main__':
-    x = removeChar("avvxsdepoad")
+    x = isSubsequence("aaaaaa", "bbaaaa")
+    print(x)
