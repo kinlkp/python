@@ -247,6 +247,10 @@ def removeChar(s: str):
 def isSubsequence(sub: str, whole: str) -> bool:
     if len(sub) == 0:
         return True
+    if len(sub) == len(whole):
+        return sub == whole
+    if len(sub) > len(whole):
+        return False
     last = 0
     for s in sub:
         res = whole.split(s)
