@@ -43,7 +43,7 @@ with open("dataset2.csv", mode='r')  as f:
                 csvFile2 = csv.reader(f1)
                 for y in csvFile2:
                     if x[0] in y:
-                        speed = ((float(x[1])/(float(y[1])) - 1)) * math.sqrt(float(x[1]) * 9.8**2)
+                        speed = (((float(x[1])/float(y[1])) - 1) * math.sqrt(float(x[1]) * 9.8**2))
                         res.append([x[0], speed])
 
 x=sorted(res, key=lambda x: x[1], reverse=True)
